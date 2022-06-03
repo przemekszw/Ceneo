@@ -13,7 +13,7 @@ pros_count = reviews.pros.map(bool).sum()
 cons_count = reviews.cons.map(bool).sum()
 print(f"""Dla produktu o identyfikatorze {product_id} dostępnych jest {reviews_count} opinii.
 Dla {pros_count} opinii autorzy podali listę zalet, a dla {cons_count} listę wad.
-Średnia ocena produktu to {product_rating:.1f}.""")
+Średnia ocena produktu to: {product_rating:.1f}.""")
 
 recommendations = reviews.recommendation.value_counts(dropna = False)
 recommendations.plot.pie()
